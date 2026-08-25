@@ -1,0 +1,8 @@
+/build/
+/AppDir/
+*.AppImage
+*.user
+*.log
+.cache/
+.idea/
+.vscode/

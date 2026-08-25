@@ -1,0 +1,14 @@
+#!/bin/sh
+# Bazzite-first launcher: use the host's matching Qt/KF6 stack and Kvantum
+# plugin. This avoids mixing desktop integration libraries inside an AppImage.
+appdir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+if [ -z "${QT_STYLE_OVERRIDE:-}" ] && [ -f /usr/lib64/qt6/plugins/styles/libkvantum.so ]; then
+    export QT_STYLE_OVERRIDE=kvantum
+fi
+
+if [ -d /usr/lib64/qt6/plugins ]; then
+    export QT_PLUGIN_PATH="/usr/lib64/qt6/plugins${QT_PLUGIN_PATH:+:$QT_PLUGIN_PATH}"
+fi
+
+exec "$appdir/usr/bin/jmkvpropedit-qt" "$@"

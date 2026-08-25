@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="background" x1="74" y1="56" x2="440" y2="468" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#263a68"/>
+      <stop offset="0.48" stop-color="#17223f"/>
+      <stop offset="1" stop-color="#0b1022"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="82" y1="76" x2="432" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86e7ff"/>
+      <stop offset="0.48" stop-color="#7199ff"/>
+      <stop offset="1" stop-color="#9d6cff"/>
+    </linearGradient>
+    <linearGradient id="film" x1="142" y1="132" x2="355" y2="371" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#c6d5ff"/>
+    </linearGradient>
+    <linearGradient id="pencil" x1="312" y1="302" x2="428" y2="426" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffd66e"/>
+      <stop offset="1" stop-color="#ff8f52"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dy="14"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0.02 0 0 0 0 0.12 0 0 0 .55 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect x="34" y="34" width="444" height="444" rx="112" fill="url(#background)"/>
+  <rect x="43" y="43" width="426" height="426" rx="103" fill="none" stroke="url(#rim)" stroke-width="9" opacity=".92"/>
+  <path d="M97 72c72-34 207-30 292 7 31 14 54 35 70 61-63-31-139-43-225-34-61 6-112 22-162 50 1-37 8-63 25-84z" fill="#fff" opacity=".08"/>
+
+  <g filter="url(#shadow)">
+    <rect x="112" y="112" width="288" height="288" rx="58" fill="#111a31" stroke="url(#film)" stroke-width="11"/>
+    <g fill="url(#rim)">
+      <rect x="130" y="139" width="22" height="35" rx="7"/>
+      <rect x="130" y="190" width="22" height="35" rx="7"/>
+      <rect x="130" y="241" width="22" height="35" rx="7"/>
+      <rect x="130" y="292" width="22" height="35" rx="7"/>
+      <rect x="130" y="343" width="22" height="30" rx="7"/>
+      <rect x="360" y="139" width="22" height="35" rx="7"/>
+      <rect x="360" y="190" width="22" height="35" rx="7"/>
+      <rect x="360" y="241" width="22" height="35" rx="7"/>
+      <rect x="360" y="292" width="22" height="35" rx="7"/>
+      <rect x="360" y="343" width="22" height="30" rx="7"/>
+    </g>
+    <g stroke="url(#film)" stroke-width="14" stroke-linecap="round">
+      <path d="M184 190h144"/>
+      <path d="M184 256h144"/>
+      <path d="M184 322h144"/>
+    </g>
+    <g fill="#111a31" stroke="url(#rim)" stroke-width="11">
+      <circle cx="225" cy="190" r="19"/>
+      <circle cx="296" cy="256" r="19"/>
+      <circle cx="243" cy="322" r="19"/>
+    </g>
+  </g>
+
+  <g transform="rotate(-45 374 374)" filter="url(#shadow)">
+    <rect x="348" y="300" width="52" height="135" rx="20" fill="url(#pencil)" stroke="#fff4cf" stroke-width="7"/>
+    <path d="M348 326h52" stroke="#8d4d42" stroke-width="8"/>
+    <path d="M348 435l26 36 26-36z" fill="#f5d8b6" stroke="#fff4cf" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M366 457l8 14 8-14z" fill="#20263b"/>
+  </g>
+</svg>

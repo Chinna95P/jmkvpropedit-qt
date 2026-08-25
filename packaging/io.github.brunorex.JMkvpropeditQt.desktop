@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=JMkvpropedit Qt
+Comment=Batch-edit Matroska properties
+Exec=jmkvpropedit-qt %F
+Icon=io.github.brunorex.JMkvpropeditQt
+Terminal=false
+Categories=AudioVideo;AudioVideoEditing;Qt;
+MimeType=video/x-matroska;audio/x-matroska;video/webm;
+StartupWMClass=JMkvpropeditQt
